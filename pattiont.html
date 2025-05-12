@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>عيادة الأسنان - الحجز الإلكتروني</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://i.postimg.cc/SsCrmJ9h/1.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: rgb(255 255 255 / 0%);
+      color: #000000;
+      padding: 20px;
+      border-radius: 15px;
+    }
+    .doctor {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .doctor img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .clinic-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .booking-info, .contact-info {
+      margin-top: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea, select {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      padding: 10px;
+      background-color: #2b7a78;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    button:hover {
+      background-color: #3aafa9;
+    }
+    .social {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    .social a {
+      color: #2b7a78;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .doctor {
+        flex-direction: column;
+        text-align: center;
+      }
+      .doctor img {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="overlay">
+  <div class="container">
+    <h1 style="font-size: 25px; color: white;">مرحبًا بكم في عيادة الأسنان</h1>
+
+    <h2 style="font-size: 25px; color: white;">فريق الأطباء</h2>
+    <div class="doctor">
+      <img src="https://i.postimg.cc/Dfxdy2zD/1.avif" alt="الدكتور مايكل">
+      <div>د. مايكل - أخصائي تجميل الأسنان</div>
+    </div>
+    <div class="doctor">
+      <img src="https://i.postimg.cc/ry7GtfSC/2.jpg" alt="الدكتور إسلام أحمد">
+      <div>د. إسلام أحمد - أخصائي جراحة الفم</div>
+    </div>
+
+    <img class="clinic-img" src="https://i.postimg.cc/ydtRcNSY/3.avif" alt="صورة العيادة">
+
+    <div class="booking-info">
+      <h2 style="font-size: 25px; color: white;">معلومات الحجز</h2>
+      <ul>
+        <li style="font-size: 25px; color: white;">الكشف العادي: 100 جنيه</li>
+        <li style="font-size: 20px; color: white;">الكشف المستعجل: 200 جنيه</li>
+        <li style="font-size: 25px; color: white;">عرض خاص: حشو الدرس عليه تنظيف اسنان هدية</li>
+      </ul>
+    </div>
+
+    <div class="contact-info">
+      <h2 style="font-size: 25px; color: white;">احجز الآن</h2>
+      <form id="booking-form">
+        <input type="text" id="name" placeholder="الاسم بالكامل" required>
+        <input type="tel" id="phone" placeholder="رقم الهاتف" required>
+        <label style="font-size: 20px; color: white;">النوع:</label>
+        <select id="gender" required>
+          <option style="font-size: 20px; color: rgb(5, 5, 5);" value="">اختر النوع</option>
+          <option value="ذكر">ذكر</option>
+          <option value="أنثى">أنثى</option>
+        </select>
+
+        <label style="font-size: 20px; color: white;">نوع الشكوى:</label>
+        <select id="complaint" required>
+          <option value="">اختر نوع الشكوى</option>
+          <option value="حشو الأسنان">حشو الأسنان</option>
+          <option value="تنظيف الأسنان">تنظيف الأسنان</option>
+          <option value="تبييض الأسنان">تبييض الأسنان</option>
+          <option value="علاج اللثة">علاج اللثة</option>
+          <option value="خلع الأسنان">خلع الأسنان</option>
+          <option value="تركيب تيجان أو جسر أسنان">تركيب تيجان أو جسر أسنان</option>
+          <option value="زراعة الأسنان">زراعة الأسنان</option>
+          <option value="علاج الجذور">علاج الجذور (علاج عصب)</option>
+          <option value="حشو تجميلي">حشو تجميلي (حشوات بيضاء)</option>
+          <option value="تقويم الأسنان">تقويم الأسنان</option>
+          <option value="علاج حساسية الأسنان">علاج حساسية الأسنان</option>
+        </select>
+
+        <label style="font-size: 20px; color: white;">خيارات إضافية للمريض:</label>
+        <select id="additionalComplaint" required>
+          <option value="">اختر الأعراض</option>
+          <option value="ألم في الأسنان">ألم في الأسنان</option>
+          <option value="ألم في اللثة">ألم في اللثة</option>
+          <option value="تورم أو خراج">تورم أو خراج</option>
+          <option value="تسوس الأسنان">تسوس الأسنان</option>
+        </select>
+
+        <label style="font-size: 20px; color: white;"><input type="checkbox" id="urgent"> حجز مستعجل</label>
+        <button style="font-size: 20px; color: white;" type="submit">احجز الآن</button>
+      </form>
+
+      <div id="confirmation-message" style="display: none; color: white;"></div>
+      <div id="error-message" style="display: none; color: red;">حدث خطأ أثناء الحجز، يرجى المحاولة لاحقًا.</div>
+
+      <!-- زر لمعرفة ترتيب الحجز -->
+      <h2 style="font-size: 25px; color: white;">إدخال رقم الهاتف لمعرفة ترتيب الحجز</h2>
+      <input type="tel" id="search-phone" placeholder="أدخل رقم الهاتف" />
+      <button style="font-size: 20px;" id="search-btn">ابحث عن الترتيب</button>
+      <div id="order-position" style="display: none; color: white;"></div>
+    </div>
+
+    <div class="social">
+      <a style="font-size: 20px; color: white;" href="https://wa.me/01228594118" target="_blank">واتساب</a>
+      <a style="font-size: 20px; color: white;" href="https://www.facebook.com/profile.php?id=100087479418591" target="_blank">فيسبوك</a>
+      <a style="font-size: 20px; color: white;" href="https://maps.google.com/?q=عيادة+أسنان" target="_blank">موقع العيادة</a>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+  import { getDatabase, ref, set, push, get } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA5BC7P585pyrFvRRoh39P8ak9pa9vmuO4",
+    authDomain: "dentalclinic-a20b0.firebaseapp.com",
+    databaseURL: "https://dentalclinic-a20b0-default-rtdb.firebaseio.com",
+    projectId: "dentalclinic-a20b0",
+    storageBucket: "dentalclinic-a20b0.appspot.com",
+    messagingSenderId: "948120487454",
+    appId: "1:948120487454:web:36ef5aff1f7e804d4d100f",
+    measurementId: "G-72JJ03SSVS"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+
+  const bookingForm = document.getElementById('booking-form');
+  const confirmationMessage = document.getElementById('confirmation-message');
+  const errorMessage = document.getElementById('error-message');
+  const orderPosition = document.getElementById('order-position');
+  const searchPhoneInput = document.getElementById('search-phone');
+  const searchBtn = document.getElementById('search-btn');
+
+  bookingForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const gender = document.getElementById('gender').value;
+    const complaint = document.getElementById('complaint').value;
+    const additionalComplaint = document.getElementById('additionalComplaint').value;
+    const urgent = document.getElementById('urgent').checked;
+
+    const bookingData = {
+      name: name,
+      phone: phone,
+      gender: gender,
+      complaint: complaint,
+      additionalComplaint: additionalComplaint,
+      urgent: urgent,
+      date: new Date().toISOString()
+    };
+
+    const bookingsRef = ref(database, 'bookings');
+    const newBookingRef = push(bookingsRef);
+
+    set(newBookingRef, bookingData)
+      .then(() => {
+        confirmationMessage.style.display = 'block';
+        confirmationMessage.innerText = `تم الحجز بنجاح!`;
+        errorMessage.style.display = 'none';
+        bookingForm.reset();
+      })
+      .catch(() => {
+        errorMessage.style.display = 'block';
+        confirmationMessage.style.display = 'none';
+      });
+  });
+
+  searchBtn.addEventListener('click', function() {
+    const phone = searchPhoneInput.value;
+    if (phone) {
+      get(ref(database, 'bookings')).then(snapshot => {
+        if (snapshot.exists()) {
+          let bookings = snapshot.val();
+          let keysSortedByTime = Object.entries(bookings).sort(
+            (a, b) => new Date(a[1].date) - new Date(b[1].date)
+          );
+
+          let found = false;
+          let position = 0;
+          keysSortedByTime.forEach(([key, value], index) => {
+            if (value.phone === phone) {
+              found = true;
+              position = index + 1;
+              orderPosition.innerText = `ترتيب حجزك: ${position}`;
+              orderPosition.style.display = 'block';
+            }
+          });
+
+          if (!found) {
+            orderPosition.innerText = 'لم يتم العثور على حجز بهذا الرقم.';
+            orderPosition.style.display = 'block';
+          }
+        } else {
+          orderPosition.innerText = 'لا توجد بيانات حجز حالياً.';
+          orderPosition.style.display = 'block';
+        }
+      });
+    } else {
+      orderPosition.innerText = 'يرجى إدخال رقم الهاتف.';
+      orderPosition.style.display = 'block';
+    }
+  });
+</script>
+</body>
+</html>
